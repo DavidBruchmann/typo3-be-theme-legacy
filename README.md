@@ -1,3 +1,8 @@
+[![TYPO3 14](https://img.shields.io/badge/TYPO3-14-orange.svg)](https://get.typo3.org/version/14)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/L3L81RC51J)
+
+
 # "Backend Theme Legacy" for TYPO3 v14
 
 TYPO3 v14 has new backend module-Icons, and some people are missing
