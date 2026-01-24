@@ -1,0 +1,13 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  WDB\BeThemeLegacy\EventListener\BeforeStylesheetsRenderingEventListener:
+    tags:
+      - name: 'event.listener'
+        identifier: 'be-theme-legacy/before-stylesheets-rendering-event'
+        event: TYPO3\CMS\Core\Page\Event\BeforeStylesheetsRenderingEvent
+        method: '__invoke'
+        public: true

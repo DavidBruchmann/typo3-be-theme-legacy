@@ -1,0 +1,225 @@
+.modulemenu-icon .icon-markup {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+/*
+.modulemenu-icon .icon-markup svg {
+    display: none !important;
+}
+[data-identifier="modulegroup-site"] .icon-markup {
+    background-image: url('../Icons/module/module-dashboard.svg');
+}
+[data-identifier="modulegroup-system"] .icon-markup {
+    background-image: url('../Icons/module/module-dashboard.svg');
+}
+[data-identifier="modulegroup-tools"] .icon-markup {
+    background-image: url('../Icons/module/module-dashboard.svg');
+}
+[data-identifier="modulegroup-web"] .icon-markup {
+    background-image: url('../Icons/module/module-dashboard.svg');
+}
+    [data-identifier=""] .icon-markup {}
+    [data-identifier=""] .icon-markup {}
+*/
+
+
+[data-identifier="module-about"] .icon-markup svg { display: none !important;}
+[data-identifier="module-about"] .icon-markup {
+    background-image: url('../Icons/module/module-about.svg');
+}
+[data-identifier="module-aboutmodules"] .icon-markup svg { display: none !important;}
+[data-identifier="module-aboutmodules"] .icon-markup {
+    background-image: url('../Icons/module/module-aboutmodules.svg');
+}
+[data-identifier="module-adminpanel"] .icon-markup svg { display: none !important;}
+[data-identifier="module-adminpanel"] .icon-markup {
+    background-image: url('../Icons/module/module-adminpanel.svg');
+}
+[data-identifier="module-belog"] .icon-markup svg { display: none !important;}
+[data-identifier="module-belog"] .icon-markup {
+    background-image: url('../Icons/module/module-belog.svg');
+}
+[data-identifier="module-beuser"] .icon-markup svg { display: none !important;}
+[data-identifier="module-beuser"] .icon-markup {
+    background-image: url('../Icons/module/module-beuser.svg');
+}
+[data-identifier="module-config"] .icon-markup svg { display: none !important;}
+[data-identifier="module-config"] .icon-markup {
+    background-image: url('../Icons/module/module-config.svg');
+}
+[data-identifier="module-contentelements"] .icon-markup svg { display: none !important;}
+[data-identifier="module-contentelements"] .icon-markup {
+    background-image: url('../Icons/module/module-contentelements.svg');
+}
+[data-identifier="module-cshmanual"] .icon-markup svg { display: none !important;}
+[data-identifier="module-cshmanual"] .icon-markup {
+    background-image: url('../Icons/module/module-cshmanual.svg');
+}
+[data-identifier="module-dashboard"] .icon-markup svg { display: none !important;}
+[data-identifier="module-dashboard"] .icon-markup {
+    background-image: url('../Icons/module/module-dashboard.svg');
+}
+[data-identifier="module-dbal"] .icon-markup svg { display: none !important;}
+[data-identifier="module-dbal"] .icon-markup {
+    background-image: url('../Icons/module/module-dbal.svg');
+}
+[data-identifier="module-dbint"] .icon-markup svg { display: none !important;}
+[data-identifier="module-dbint"] .icon-markup {
+    background-image: url('../Icons/module/module-dbint.svg');
+}
+[data-identifier="module-documentation"] .icon-markup svg { display: none !important;}
+[data-identifier="module-documentation"] .icon-markup {
+    background-image: url('../Icons/module/module-documentation.svg');
+}
+[data-identifier="module-extensionmanager"] .icon-markup svg { display: none !important;}
+[data-identifier="module-extensionmanager"] .icon-markup {
+    background-image: url('../Icons/module/module-extensionmanager.svg');
+}
+[data-identifier="module-filelist"] .icon-markup svg { display: none !important;}
+[data-identifier="module-filelist"] .icon-markup {
+    background-image: url('../Icons/module/module-filelist.svg');
+}
+[data-identifier="module-form"] .icon-markup svg { display: none !important;}
+[data-identifier="module-form"] .icon-markup {
+    background-image: url('../Icons/module/module-form.svg');
+}
+[data-identifier="module-func"] .icon-markup svg { display: none !important;}
+[data-identifier="module-func"] .icon-markup {
+    background-image: url('../Icons/module/module-func.svg');
+}
+[data-identifier="module-generic"] .icon-markup svg { display: none !important;}
+[data-identifier="module-generic"] .icon-markup {
+    background-image: url('../Icons/module/module-generic.svg');
+}
+[data-identifier="module-help"] .icon-markup svg { display: none !important;}
+[data-identifier="module-help"] .icon-markup {
+    background-image: url('../Icons/module/module-help.svg');
+}
+[data-identifier="module-indexed_search"] .icon-markup svg { display: none !important;}
+[data-identifier="module-indexed_search"] .icon-markup {
+    background-image: url('../Icons/module/module-indexed_search.svg');
+}
+[data-identifier="module-info"] .icon-markup svg { display: none !important;}
+[data-identifier="module-info"] .icon-markup {
+    background-image: url('../Icons/module/module-info.svg');
+}
+[data-identifier="module-install-environment"] .icon-markup svg { display: none !important;}
+[data-identifier="module-install-environment"] .icon-markup {
+    background-image: url('../Icons/module/module-install-environment.svg');
+}
+[data-identifier="module-install-maintenance"] .icon-markup svg { display: none !important;}
+[data-identifier="module-install-maintenance"] .icon-markup {
+    background-image: url('../Icons/module/module-install-maintenance.svg');
+}
+[data-identifier="module-install-settings"] .icon-markup svg { display: none !important;}
+[data-identifier="module-install-settings"] .icon-markup {
+    background-image: url('../Icons/module/module-install-settings.svg');
+}
+[data-identifier="module-install-upgrade"] .icon-markup svg { display: none !important;}
+[data-identifier="module-install-upgrade"] .icon-markup {
+    background-image: url('../Icons/module/module-install-upgrade.svg');
+}
+[data-identifier="module-install"] .icon-markup svg { display: none !important;}
+[data-identifier="module-install"] .icon-markup {
+    background-image: url('../Icons/module/module-install.svg');
+}
+[data-identifier="module-lang"] .icon-markup svg { display: none !important;}
+[data-identifier="module-lang"] .icon-markup {
+    background-image: url('../Icons/module/module-lang.svg');
+}
+[data-identifier="module-linkvalidator"] .icon-markup svg { display: none !important;}
+[data-identifier="module-linkvalidator"] .icon-markup {
+    background-image: url('../Icons/module/module-linkvalidator.svg');
+}
+[data-identifier="module-list"] .icon-markup svg { display: none !important;}
+[data-identifier="module-list"] .icon-markup {
+    background-image: url('../Icons/module/module-list.svg');
+}
+[data-identifier="module-page"] .icon-markup svg { display: none !important;}
+[data-identifier="module-page"] .icon-markup {
+    background-image: url('../Icons/module/module-page.svg');
+}
+[data-identifier="module-permission"] .icon-markup svg { display: none !important;}
+[data-identifier="module-permission"] .icon-markup {
+    background-image: url('../Icons/module/module-permission.svg');
+}
+[data-identifier="module-reactions"] .icon-markup svg { display: none !important;}
+[data-identifier="module-reactions"] .icon-markup {
+    background-image: url('../Icons/module/module-reactions.svg');
+}
+[data-identifier="module-recycler"] .icon-markup svg { display: none !important;}
+[data-identifier="module-recycler"] .icon-markup {
+    background-image: url('../Icons/module/module-recycler.svg');
+}
+[data-identifier="module-redirects"] .icon-markup svg { display: none !important;}
+[data-identifier="module-redirects"] .icon-markup {
+    background-image: url('../Icons/module/module-redirects.svg');
+}
+[data-identifier="module-reports"] .icon-markup svg { display: none !important;}
+[data-identifier="module-reports"] .icon-markup {
+    background-image: url('../Icons/module/module-reports.svg');
+}
+[data-identifier="module-rte-ckeditor"] .icon-markup svg { display: none !important;}
+[data-identifier="module-rte-ckeditor"] .icon-markup {
+    background-image: url('../Icons/module/module-rte-ckeditor.svg');
+}
+[data-identifier="module-scheduler"] .icon-markup svg { display: none !important;}
+[data-identifier="module-scheduler"] .icon-markup {
+    background-image: url('../Icons/module/module-scheduler.svg');
+}
+[data-identifier="module-security"] .icon-markup svg { display: none !important;}
+[data-identifier="module-security"] .icon-markup {
+    background-image: url('../Icons/module/module-security.svg');
+}
+[data-identifier="module-seo"] .icon-markup svg { display: none !important;}
+[data-identifier="module-seo"] .icon-markup {
+    background-image: url('../Icons/module/module-seo.svg');
+}
+[data-identifier="module-setup"] .icon-markup svg { display: none !important;}
+[data-identifier="module-setup"] .icon-markup {
+    background-image: url('../Icons/module/module-setup.svg');
+}
+[data-identifier="module-site-settings"] .icon-markup svg { display: none !important;}
+[data-identifier="module-site-settings"] .icon-markup {
+    background-image: url('../Icons/module/module-site-settings.svg');
+}
+[data-identifier="module-sites"] .icon-markup svg { display: none !important;}
+[data-identifier="module-sites"] .icon-markup {
+    background-image: url('../Icons/module/module-sites.svg');
+}
+[data-identifier="module-styleguide"] .icon-markup svg { display: none !important;}
+[data-identifier="module-styleguide"] .icon-markup {
+    background-image: url('../Icons/module/module-a-taennschen.svg');
+}
+[data-identifier="module-taskcenter"] .icon-markup svg { display: none !important;}
+[data-identifier="module-taskcenter"] .icon-markup {
+    background-image: url('../Icons/module/module-taskcenter.svg');
+}
+[data-identifier="module-template"] .icon-markup svg { display: none !important;}
+[data-identifier="module-template"] .icon-markup {
+    background-image: url('../Icons/module/module-template.svg');
+}
+[data-identifier="module-tsconfig"] .icon-markup svg { display: none !important;}
+[data-identifier="module-tsconfig"] .icon-markup {
+    background-image: url('../Icons/module/module-tsconfig.svg');
+}
+[data-identifier="module-urls"] .icon-markup svg { display: none !important;}
+[data-identifier="module-urls"] .icon-markup {
+    background-image: url('../Icons/module/module-urls.svg');
+}
+[data-identifier="module-version"] .icon-markup svg { display: none !important;}
+[data-identifier="module-version"] .icon-markup {
+    background-image: url('../Icons/module/module-version.svg');
+}
+[data-identifier="module-viewpage"] .icon-markup svg { display: none !important;}
+[data-identifier="module-viewpage"] .icon-markup {
+    background-image: url('../Icons/module/module-viewpage.svg');
+}
+[data-identifier="module-workspaces"] .icon-markup svg { display: none !important;}
+[data-identifier="module-workspaces"] .icon-markup {
+    background-image: url('../Icons/module/module-workspaces.svg');
+}
