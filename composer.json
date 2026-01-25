@@ -3,9 +3,9 @@
     "type": "typo3-cms-extension",
     "description": "Displayes colored Icons in the backend of TYPO3 v14 like in former versions.",
     "license": "GPL-3.0-or-later",
-	"homepage": "https://github.com/DavidBruchmann/be-theme-legacy",
+	"homepage": "https://github.com/DavidBruchmann/typo3-be-theme-legacy/",
 	"support": {
-		"issues": "https://github.com/DavidBruchmann/be-theme-legacy/issues"
+		"issues": "https://github.com/DavidBruchmann/typo3-be-theme-legacy/issues"
 	},
 	"keywords": [
 		"TYPO3",
