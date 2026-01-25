@@ -1,3 +1,10 @@
+/**
+ * IMPORTANT:
+ * css rules are noted in a way that new or unknow icons aren't hampered
+ * and hopefully displayed correctly.'
+ * Therefore there exists only one very general rule.
+ */
+
 .modulemenu-icon .icon-markup {
     display: inline-block;
     width: 100%;
@@ -6,26 +13,44 @@
     background-repeat: no-repeat;
     background-position: center;
 }
-/*
-.modulemenu-icon .icon-markup svg {
-    display: none !important;
-}
-[data-identifier="modulegroup-site"] .icon-markup {
-    background-image: url('../Icons/module/module-dashboard.svg');
-}
-[data-identifier="modulegroup-system"] .icon-markup {
-    background-image: url('../Icons/module/module-dashboard.svg');
-}
-[data-identifier="modulegroup-tools"] .icon-markup {
-    background-image: url('../Icons/module/module-dashboard.svg');
-}
-[data-identifier="modulegroup-web"] .icon-markup {
-    background-image: url('../Icons/module/module-dashboard.svg');
-}
-    [data-identifier=""] .icon-markup {}
-    [data-identifier=""] .icon-markup {}
-*/
 
+[data-identifier="modulegroup-file"] .icon-markup svg { display: none !important;}
+[data-identifier="modulegroup-file"] .icon-markup {
+    background-color: currentColor;
+    mask: url('../Icons/modulegroup/modulegroup-file.svg');
+}
+[data-identifier="modulegroup-help"] .icon-markup svg { display: none !important;}
+[data-identifier="modulegroup-help"] .icon-markup {
+    background-color: currentColor;
+    mask: url('../Icons/modulegroup/modulegroup-help.svg');
+}
+[data-identifier="modulegroup-site"] .icon-markup svg { display: none !important;}
+[data-identifier="modulegroup-site"] .icon-markup {
+    background-color: currentColor;
+    mask: url('../Icons/modulegroup/modulegroup-site.svg');
+}
+[data-identifier="modulegroup-system"] .icon-markup svg { display: none !important;}
+[data-identifier="modulegroup-system"] .icon-markup {
+    background-color: currentColor;
+    mask: url('../Icons/modulegroup/modulegroup-system.svg');
+}
+[data-identifier="modulegroup-tools"] .icon-markup svg { display: none !important;}
+[data-identifier="modulegroup-tools"] .icon-markup {
+    background-color: currentColor;
+    mask: url('../Icons/modulegroup/modulegroup-tools.svg');
+}
+[data-identifier="modulegroup-user"] .icon-markup svg { display: none !important;}
+[data-identifier="modulegroup-user"] .icon-markup {
+    background-color: currentColor;
+    mask: url('../Icons/modulegroup/modulegroup-user.svg');
+}
+[data-identifier="modulegroup-web"] .icon-markup svg { display: none !important;}
+[data-identifier="modulegroup-web"] .icon-markup {
+    background-color: currentColor;
+    mask: url('../Icons/modulegroup/modulegroup-web.svg');
+}
+
+/** -------------------------------------------------------------------------------- **/
 
 [data-identifier="module-about"] .icon-markup svg { display: none !important;}
 [data-identifier="module-about"] .icon-markup {

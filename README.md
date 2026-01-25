@@ -42,3 +42,13 @@ SVGs. Both things are done with CSS only.
 
 The CSS is added conditionally by an EventHandler, depending on
 the user-settings.
+
+## individual adjustments and your own theme extension
+
+Pleasee feel free to clone the repository with respect to the license,
+and adjust the namespaces to create your own theme.
+
+For Icons I discovered the icon-repository of TYPO3-developer
+Benjamin Kott, pay attention to the "guide" about colors and sizes
+as well as icon groups / types.
+https://typo3.github.io/TYPO3.Icons/index.html
