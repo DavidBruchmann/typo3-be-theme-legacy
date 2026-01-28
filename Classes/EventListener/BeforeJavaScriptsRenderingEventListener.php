@@ -3,19 +3,19 @@ declare(strict_types=1);
 
 namespace WDB\BeThemeLegacy\EventListener;
 
-use TYPO3\CMS\Core\Page\Event\BeforeStylesheetsRenderingEvent;
+use TYPO3\CMS\Core\Page\Event\BeforeJavaScriptsRenderingEvent;
 use TYPO3\CMS\Core\Http\ApplicationType;
 
 /*
 #[AsEventListener(
     identifier: 'WDB\BeThemeLegacy\EventListener\ThemeLegacy',
-    event: BeforeStylesheetsRenderingEvent::class
+    event: BeforeJavaScriptsRenderingEvent::class
     // before: 'someIdentifier, anotherIdentifier',
 )]
 */
-final class BeforeStylesheetsRenderingEventListener
+final class BeforeJavaScriptsRenderingEventListener
 {
-    public function __invoke(BeforeStylesheetsRenderingEvent $event): void
+    public function __invoke(BeforeJavaScriptsRenderingEvent $event): void
     {
         $request = $this->getRequest();
         if (!$request || !ApplicationType::fromRequest($request)->isBackend()) {
@@ -24,23 +24,17 @@ final class BeforeStylesheetsRenderingEventListener
         $userTheme = $this->getBackendUser()->uc['theme'] ?? '';
         if ($userTheme === 'be_theme_legacy') {
             $assetCollector = $event->getAssetCollector();
-            $this->addStyleSheetFile($assetCollector);
+            $this->addJavaScriptFile($assetCollector);
         }
     }
 
-    private function addStyleSheetFile($assetCollector)
+    private function addJavaScriptFile($assetCollector)
     {
-        $identifier = 'be-theme-legacy-style';
-        $source = 'EXT:be_theme_legacy/Resources/Public/Css/be-theme-legacy.css';
-        $attributes = [
-            'media' => 'all'
-        ];
-        $options = [
-            'priority' => false,
-            'useNonce' => false,
-            // 'external' => true,
-        ];
-        $assetCollector->addStyleSheet($identifier, $source, $attributes, $options);
+        $identifier = 'be-theme-legacy-script';
+        $source = 'EXT:be_theme_legacy/Resources/Public/JavaScript/be-theme-legacy.js';
+        $attributes = [];
+        $options = [];
+        $assetCollector->addJavaScript($identifier, $source, $attributes, $options);
     }
 
     private function getRequest()

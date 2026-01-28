@@ -11,3 +11,11 @@ services:
         event: TYPO3\CMS\Core\Page\Event\BeforeStylesheetsRenderingEvent
         method: '__invoke'
         public: true
+
+  WDB\BeThemeLegacy\EventListener\BeforeJavaScriptsRenderingEventListener:
+    tags:
+      - name: 'event.listener'
+        identifier: 'be-theme-legacy/before-javascript-rendering-event'
+        event: TYPO3\CMS\Core\Page\Event\BeforeJavaScriptsRenderingEvent
+        method: '__invoke'
+        public: true

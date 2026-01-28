@@ -52,199 +52,322 @@
 
 /** -------------------------------------------------------------------------------- **/
 
+typo3-backend-icon[identifier="module-about"]::part(svg),
 [data-identifier="module-about"] .icon-markup svg { display: none !important;}
+typo3-backend-icon[identifier="module-about"]::part(icon),
 [data-identifier="module-about"] .icon-markup {
     background-image: url('../Icons/module/module-about.svg');
 }
+typo3-backend-icon[identifier="module-aboutmodules"]::part(svg),
 [data-identifier="module-aboutmodules"] .icon-markup svg { display: none !important;}
+typo3-backend-icon[identifier="module-aboutmodules"]::part(icon),
 [data-identifier="module-aboutmodules"] .icon-markup {
     background-image: url('../Icons/module/module-aboutmodules.svg');
 }
+typo3-backend-icon[identifier="module-adminpanel"]::part(svg),
 [data-identifier="module-adminpanel"] .icon-markup svg { display: none !important;}
+typo3-backend-icon[identifier="module-adminpanel"]::part(icon),
 [data-identifier="module-adminpanel"] .icon-markup {
     background-image: url('../Icons/module/module-adminpanel.svg');
 }
+typo3-backend-icon[identifier="module-belog"]::part(svg),
 [data-identifier="module-belog"] .icon-markup svg { display: none !important;}
+typo3-backend-icon[identifier="module-belog"]::part(icon),
 [data-identifier="module-belog"] .icon-markup {
     background-image: url('../Icons/module/module-belog.svg');
 }
+typo3-backend-icon[identifier="module-beuser"]::part(svg),
 [data-identifier="module-beuser"] .icon-markup svg { display: none !important;}
+typo3-backend-icon[identifier="module-beuser"]::part(icon),
 [data-identifier="module-beuser"] .icon-markup {
     background-image: url('../Icons/module/module-beuser.svg');
 }
+typo3-backend-icon[identifier="module-config"]::part(svg),
 [data-identifier="module-config"] .icon-markup svg { display: none !important;}
+typo3-backend-icon[identifier="module-config"]::part(icon),
 [data-identifier="module-config"] .icon-markup {
     background-image: url('../Icons/module/module-config.svg');
 }
+typo3-backend-icon[identifier="module-contentelements"]::part(svg),
 [data-identifier="module-contentelements"] .icon-markup svg { display: none !important;}
+typo3-backend-icon[identifier="module-contentelements"]::part(icon),
 [data-identifier="module-contentelements"] .icon-markup {
     background-image: url('../Icons/module/module-contentelements.svg');
 }
+typo3-backend-icon[identifier="module-cshmanual"]::part(svg),
 [data-identifier="module-cshmanual"] .icon-markup svg { display: none !important;}
+typo3-backend-icon[identifier="module-cshmanual"]::part(icon),
 [data-identifier="module-cshmanual"] .icon-markup {
     background-image: url('../Icons/module/module-cshmanual.svg');
 }
+typo3-backend-icon[identifier="module-dashboard"]::part(svg),
 [data-identifier="module-dashboard"] .icon-markup svg { display: none !important;}
+typo3-backend-icon[identifier="module-dashboard"]::part(icon),
 [data-identifier="module-dashboard"] .icon-markup {
     background-image: url('../Icons/module/module-dashboard.svg');
 }
+typo3-backend-icon[identifier="module-dbal"]::part(icon),
 [data-identifier="module-dbal"] .icon-markup svg { display: none !important;}
+typo3-backend-icon[identifier="module-dbal"]::part(icon),
 [data-identifier="module-dbal"] .icon-markup {
     background-image: url('../Icons/module/module-dbal.svg');
 }
+typo3-backend-icon[identifier="module-dbint"]::part(svg),
 [data-identifier="module-dbint"] .icon-markup svg { display: none !important;}
+typo3-backend-icon[identifier="module-dbint"]::part(icon),
 [data-identifier="module-dbint"] .icon-markup {
     background-image: url('../Icons/module/module-dbint.svg');
 }
+typo3-backend-icon[identifier="module-documentation"]::part(svg),
 [data-identifier="module-documentation"] .icon-markup svg { display: none !important;}
+typo3-backend-icon[identifier="module-documentation"]::part(icon),
 [data-identifier="module-documentation"] .icon-markup {
     background-image: url('../Icons/module/module-documentation.svg');
 }
+typo3-backend-icon[identifier="module-extensionmanager"]::part(svg),
 [data-identifier="module-extensionmanager"] .icon-markup svg { display: none !important;}
+typo3-backend-icon[identifier="module-extensionmanager"]::part(icon),
 [data-identifier="module-extensionmanager"] .icon-markup {
     background-image: url('../Icons/module/module-extensionmanager.svg');
 }
+typo3-backend-icon[identifier="module-filelist"]::part(svg),
 [data-identifier="module-filelist"] .icon-markup svg { display: none !important;}
+typo3-backend-icon[identifier="module-filelist"]::part(icon),
 [data-identifier="module-filelist"] .icon-markup {
     background-image: url('../Icons/module/module-filelist.svg');
 }
+typo3-backend-icon[identifier="module-form"]::part(svg),
 [data-identifier="module-form"] .icon-markup svg { display: none !important;}
+typo3-backend-icon[identifier="module-form"]::part(icon),
 [data-identifier="module-form"] .icon-markup {
     background-image: url('../Icons/module/module-form.svg');
 }
+typo3-backend-icon[identifier="module-func"]::part(svg),
 [data-identifier="module-func"] .icon-markup svg { display: none !important;}
+typo3-backend-icon[identifier="module-func"]::part(icon),
 [data-identifier="module-func"] .icon-markup {
     background-image: url('../Icons/module/module-func.svg');
 }
+typo3-backend-icon[identifier="module-generic"]::part(svg),
 [data-identifier="module-generic"] .icon-markup svg { display: none !important;}
+typo3-backend-icon[identifier="module-generic"]::part(icon),
 [data-identifier="module-generic"] .icon-markup {
     background-image: url('../Icons/module/module-generic.svg');
 }
+typo3-backend-icon[identifier="module-help"]::part(svg),
 [data-identifier="module-help"] .icon-markup svg { display: none !important;}
+typo3-backend-icon[identifier="module-help"]::part(icon),
 [data-identifier="module-help"] .icon-markup {
     background-image: url('../Icons/module/module-help.svg');
 }
+typo3-backend-icon[identifier="module-indexed_search"]::part(svg),
 [data-identifier="module-indexed_search"] .icon-markup svg { display: none !important;}
+typo3-backend-icon[identifier="module-indexed_search"]::part(icon),
 [data-identifier="module-indexed_search"] .icon-markup {
     background-image: url('../Icons/module/module-indexed_search.svg');
 }
+typo3-backend-icon[identifier="module-info"]::part(svg),
 [data-identifier="module-info"] .icon-markup svg { display: none !important;}
+typo3-backend-icon[identifier="module-info"]::part(icon),
 [data-identifier="module-info"] .icon-markup {
     background-image: url('../Icons/module/module-info.svg');
 }
+typo3-backend-icon[identifier="module-install-environment"]::part(svg),
 [data-identifier="module-install-environment"] .icon-markup svg { display: none !important;}
+typo3-backend-icon[identifier="module-install-environment"]::part(icon),
 [data-identifier="module-install-environment"] .icon-markup {
     background-image: url('../Icons/module/module-install-environment.svg');
 }
+typo3-backend-icon[identifier="module-install-maintenance"]::part(svg),
 [data-identifier="module-install-maintenance"] .icon-markup svg { display: none !important;}
+typo3-backend-icon[identifier="module-install-maintenance"]::part(icon),
 [data-identifier="module-install-maintenance"] .icon-markup {
     background-image: url('../Icons/module/module-install-maintenance.svg');
 }
+typo3-backend-icon[identifier="module-install-settings"]::part(svg),
 [data-identifier="module-install-settings"] .icon-markup svg { display: none !important;}
+typo3-backend-icon[identifier="module-install-settings"]::part(icon),
 [data-identifier="module-install-settings"] .icon-markup {
     background-image: url('../Icons/module/module-install-settings.svg');
 }
+typo3-backend-icon[identifier="module-install-upgrade"]::part(svg),
 [data-identifier="module-install-upgrade"] .icon-markup svg { display: none !important;}
+typo3-backend-icon[identifier="module-install-upgrade"]::part(icon),
 [data-identifier="module-install-upgrade"] .icon-markup {
     background-image: url('../Icons/module/module-install-upgrade.svg');
 }
+typo3-backend-icon[identifier="module-install"]::part(svg),
 [data-identifier="module-install"] .icon-markup svg { display: none !important;}
+typo3-backend-icon[identifier="module-install"]::part(icon),
 [data-identifier="module-install"] .icon-markup {
     background-image: url('../Icons/module/module-install.svg');
 }
+typo3-backend-icon[identifier="module-integrations"]::part(svg),
+[data-identifier="module-integrations"] .icon-markup svg { display: none !important;}
+typo3-backend-icon[identifier="module-integrations"]::part(icon),
+[data-identifier="module-integrations"] .icon-markup {
+    background-image: url('../Icons/module/module-webhooks.svg');
+}
+typo3-backend-icon[identifier="module-lang"]::part(svg),
 [data-identifier="module-lang"] .icon-markup svg { display: none !important;}
+typo3-backend-icon[identifier="module-lang"]::part(icon),
 [data-identifier="module-lang"] .icon-markup {
     background-image: url('../Icons/module/module-lang.svg');
 }
+typo3-backend-icon[identifier="module-linkvalidator"]::part(svg),
 [data-identifier="module-linkvalidator"] .icon-markup svg { display: none !important;}
+typo3-backend-icon[identifier="module-linkvalidator"]::part(icon),
 [data-identifier="module-linkvalidator"] .icon-markup {
     background-image: url('../Icons/module/module-linkvalidator.svg');
 }
+typo3-backend-icon[identifier="module-list"]::part(svg),
 [data-identifier="module-list"] .icon-markup svg { display: none !important;}
+typo3-backend-icon[identifier="module-list"]::part(icon),
 [data-identifier="module-list"] .icon-markup {
     background-image: url('../Icons/module/module-list.svg');
 }
+typo3-backend-icon[identifier="module-page"]::part(svg),
 [data-identifier="module-page"] .icon-markup svg { display: none !important;}
+typo3-backend-icon[identifier="module-page"]::part(icon),
 [data-identifier="module-page"] .icon-markup {
     background-image: url('../Icons/module/module-page.svg');
 }
+typo3-backend-icon[identifier="module-permission"]::part(svg),
 [data-identifier="module-permission"] .icon-markup svg { display: none !important;}
+typo3-backend-icon[identifier="module-permission"]::part(icon),
 [data-identifier="module-permission"] .icon-markup {
     background-image: url('../Icons/module/module-permission.svg');
 }
+typo3-backend-icon[identifier="module-reactions"]::part(svg),
 [data-identifier="module-reactions"] .icon-markup svg { display: none !important;}
+typo3-backend-icon[identifier="module-reactions"]::part(icon),
 [data-identifier="module-reactions"] .icon-markup {
     background-image: url('../Icons/module/module-reactions.svg');
 }
+typo3-backend-icon[identifier="module-recycler"]::part(svg),
 [data-identifier="module-recycler"] .icon-markup svg { display: none !important;}
+typo3-backend-icon[identifier="module-recycler"]::part(icon),
 [data-identifier="module-recycler"] .icon-markup {
     background-image: url('../Icons/module/module-recycler.svg');
 }
+typo3-backend-icon[identifier="module-redirects"]::part(svg),
 [data-identifier="module-redirects"] .icon-markup svg { display: none !important;}
+typo3-backend-icon[identifier="module-redirects"]::part(icon),
 [data-identifier="module-redirects"] .icon-markup {
     background-image: url('../Icons/module/module-redirects.svg');
 }
+typo3-backend-icon[identifier="module-reports"]::part(svg),
 [data-identifier="module-reports"] .icon-markup svg { display: none !important;}
+typo3-backend-icon[identifier="module-reports"]::part(icon),
 [data-identifier="module-reports"] .icon-markup {
     background-image: url('../Icons/module/module-reports.svg');
 }
+typo3-backend-icon[identifier="module-rte-ckeditor"]::part(svg),
 [data-identifier="module-rte-ckeditor"] .icon-markup svg { display: none !important;}
+typo3-backend-icon[identifier="module-rte-ckeditor"]::part(icon),
 [data-identifier="module-rte-ckeditor"] .icon-markup {
     background-image: url('../Icons/module/module-rte-ckeditor.svg');
 }
+typo3-backend-icon[identifier="module-scheduler"]::part(svg),
 [data-identifier="module-scheduler"] .icon-markup svg { display: none !important;}
+typo3-backend-icon[identifier="module-scheduler"]::part(icon),
 [data-identifier="module-scheduler"] .icon-markup {
     background-image: url('../Icons/module/module-scheduler.svg');
 }
+typo3-backend-icon[identifier="module-security"]::part(svg),
 [data-identifier="module-security"] .icon-markup svg { display: none !important;}
+typo3-backend-icon[identifier="module-security"]::part(icon),
 [data-identifier="module-security"] .icon-markup {
     background-image: url('../Icons/module/module-security.svg');
 }
+typo3-backend-icon[identifier="module-seo"]::part(svg),
 [data-identifier="module-seo"] .icon-markup svg { display: none !important;}
+typo3-backend-icon[identifier="module-seo"]::part(icon),
 [data-identifier="module-seo"] .icon-markup {
     background-image: url('../Icons/module/module-seo.svg');
 }
+typo3-backend-icon[identifier="module-setup"]::part(svg),
 [data-identifier="module-setup"] .icon-markup svg { display: none !important;}
+typo3-backend-icon[identifier="module-setup"]::part(icon),
 [data-identifier="module-setup"] .icon-markup {
     background-image: url('../Icons/module/module-setup.svg');
 }
-[data-identifier="module-site-settings"] .icon-markup svg { display: none !important;}
-[data-identifier="module-site-settings"] .icon-markup {
-    background-image: url('../Icons/module/module-site-settings.svg');
-}
+typo3-backend-icon[identifier="module-sites"]::part(svg),
 [data-identifier="module-sites"] .icon-markup svg { display: none !important;}
+typo3-backend-icon[identifier="module-sites"]::part(icon),
 [data-identifier="module-sites"] .icon-markup {
     background-image: url('../Icons/module/module-sites.svg');
 }
+typo3-backend-icon[identifier="module-site-settings"]::part(svg),
+[data-identifier="module-site-settings"] .icon-markup svg { display: none !important;}
+typo3-backend-icon[identifier="module-site-settings"]::part(icon),
+[data-identifier="module-site-settings"] .icon-markup {
+    background-image: url('../Icons/module/module-site-settings.svg');
+}
+typo3-backend-icon[identifier=""]::part(svg),
+[data-identifier="module-sites"] .icon-markup svg { display: none !important;}
+typo3-backend-icon[identifier=""]::part(icon),
+[data-identifier="module-sites"] .icon-markup {
+    background-image: url('../Icons/module/module-sites.svg');
+}
+typo3-backend-icon[identifier="module-styleguide"]::part(svg),
 [data-identifier="module-styleguide"] .icon-markup svg { display: none !important;}
+typo3-backend-icon[identifier="module-styleguide"]::part(icon),
 [data-identifier="module-styleguide"] .icon-markup {
     background-image: url('../Icons/module/module-a-taennschen.svg');
 }
+typo3-backend-icon[identifier="module-taskcenter"]::part(svg),
 [data-identifier="module-taskcenter"] .icon-markup svg { display: none !important;}
+typo3-backend-icon[identifier="module-taskcenter"]::part(icon),
 [data-identifier="module-taskcenter"] .icon-markup {
     background-image: url('../Icons/module/module-taskcenter.svg');
 }
+typo3-backend-icon[identifier="module-template"]::part(svg),
 [data-identifier="module-template"] .icon-markup svg { display: none !important;}
+typo3-backend-icon[identifier="module-template"]::part(icon),
 [data-identifier="module-template"] .icon-markup {
     background-image: url('../Icons/module/module-template.svg');
 }
+typo3-backend-icon[identifier="module-tsconfig"]::part(svg),
 [data-identifier="module-tsconfig"] .icon-markup svg { display: none !important;}
+typo3-backend-icon[identifier="module-tsconfig"]::part(icon),
 [data-identifier="module-tsconfig"] .icon-markup {
     background-image: url('../Icons/module/module-tsconfig.svg');
 }
+typo3-backend-icon[identifier="module-urls"]::part(svg),
 [data-identifier="module-urls"] .icon-markup svg { display: none !important;}
+typo3-backend-icon[identifier="module-urls"]::part(icon),
 [data-identifier="module-urls"] .icon-markup {
     background-image: url('../Icons/module/module-urls.svg');
 }
+typo3-backend-icon[identifier="module-version"]::part(svg),
 [data-identifier="module-version"] .icon-markup svg { display: none !important;}
+typo3-backend-icon[identifier="module-version"]::part(icon),
 [data-identifier="module-version"] .icon-markup {
     background-image: url('../Icons/module/module-version.svg');
 }
+typo3-backend-icon[identifier="module-viewpage"]::part(svg),
 [data-identifier="module-viewpage"] .icon-markup svg { display: none !important;}
+typo3-backend-icon[identifier="module-viewpage"]::part(icon),
 [data-identifier="module-viewpage"] .icon-markup {
     background-image: url('../Icons/module/module-viewpage.svg');
 }
+typo3-backend-icon[identifier="module-webhooks"]::part(svg),
+[data-identifier="module-webhooks"] .icon-markup svg { display: none !important;}
+typo3-backend-icon[identifier="module-webhooks"]::part(icon),
+[data-identifier="module-webhooks"] .icon-markup {
+    background-image: url('../Icons/module/module-webhooks.svg');
+}
+typo3-backend-icon[identifier="module-workspaces"]::part(svg),
 [data-identifier="module-workspaces"] .icon-markup svg { display: none !important;}
+typo3-backend-icon[identifier="module-workspaces"]::part(icon),
 [data-identifier="module-workspaces"] .icon-markup {
     background-image: url('../Icons/module/module-workspaces.svg');
+}
+
+.breadcrumb-item-first [data-identifier="module-list"] .icon-markup svg {
+
+}
+.breadcrumb-item-first span.icon.icon-size-small.icon-state-default.icon-module-list span.icon-markup svg {
+    display: none !important;
 }
