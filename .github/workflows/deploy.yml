@@ -40,11 +40,13 @@ jobs:
       # 1. Validate composer.json syntax and requirements
       - name: Validate composer.json
         run: composer validate --strict --no-check-publish
+        config.use-parent-dir: true
 
       # 2. Check if dependencies can be resolved for this specific PHP version
       # We use --prefer-dist and --no-progress for a clean CI output
       - name: Dry-run Composer install
         run: composer install --prefer-dist --no-progress --dry-run
+        config.use-parent-dir: true
         # Use --ignore-platform-req=php+ for PHP 8.5 until it's officially released
         if: matrix.php != '8.5'
 
