@@ -9,23 +9,6 @@ on:
 
 jobs:
 
-  # dedicated deployment job
-  deploy-site:
-    if: github.ref == 'refs/heads/main'
-    needs: build-and-deploy
-    permissions:
-      contents: write
-      pages: write      # Required for deployment
-      id-token: write   # Required for security handshake
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
-
   build-and-deploy:
     runs-on: ubuntu-latest
     strategy:
@@ -159,3 +142,37 @@ jobs:
             be-theme-legacy-documentation-*.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+
+  # dedicated deployment job
+  deploy-site:
+    if: github.ref == 'refs/heads/main'
+    needs: build-and-deploy
+    permissions:
+      contents: write
+      pages: write      # Required for deployment
+      id-token: write   # Required for security handshake
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+  # Add this at the end of your jobs in deploy.yml
+  all-checks-passed:
+    needs: build-and-deploy
+    runs-on: ubuntu-latest
+    if: always() # Ensures it runs even if a matrix job fails
+    steps:
+      - name: Decide status
+        run: |
+          if [[ "${{ contains(needs.build-and-deploy.result, 'failure') || contains(needs.build-and-deploy.result, 'cancelled') }}" == "true" ]]; then
+            echo "Some matrix jobs failed or were cancelled."
+            exit 1
+          else
+            echo "All matrix jobs passed!"
+            exit 0
+          fi
