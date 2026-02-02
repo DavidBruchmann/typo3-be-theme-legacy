@@ -1,0 +1,55 @@
+# Node
+website/node_modules/
+
+# Docusaurus
+website/build/
+website/.docusaurus/
+website/.cache-loader/
+
+
+# Generated theme files
+website/src/scss/custom_variables.scss
+website/src/scss/custom_variables.css
+
+# Admin server runtime
+website/.Build/tools/admin-server/.cache/
+website/.Build/tools/admin-server/.tmp/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Certificates
+certs/
+*.pem
+*.key
+
+# Environment variables
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Drafts, Concepts, ideas
+.wip/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+**/.cache/
+*.kate-swp
+*.*~
+
+# IDE
+.vscode/
+.idea/
+-kiro/
+
+# Archives
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.gz

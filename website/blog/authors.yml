@@ -1,0 +1,7 @@
+# website/blog/authors.yml
+davidbruchmann:
+  name: David Bruchmann
+  title: TYPO3 Developer
+  url: https://github.com/DavidBruchmann
+  # Docusaurus automatically fetches the Gravatar image for this email
+  email: david.bruchmann@gmail.com

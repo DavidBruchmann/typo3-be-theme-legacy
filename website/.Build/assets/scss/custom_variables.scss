@@ -1,0 +1,20 @@
+
+/* AUTO-GENERATED – DO NOT EDIT */
+
+:root {
+  --theme-link-color: #1a1a1a;
+  --theme-link-active-color: #000000;
+  --ifm-font-family-base: Inter, system-ui, sans-serif;
+  --ifm-font-family-monospace: JetBrains Mono, monospace;
+}
+
+html[data-theme='dark'] {
+  --theme-link-color: #eaeaea;
+  --theme-link-active-color: #ffffff;
+}
+
+:root {
+  --ifm-link-color: var(--theme-link-color);
+  --ifm-menu-color-active: var(--theme-link-active-color);
+  --ifm-navbar-link-active-color: var(--theme-link-active-color);
+}

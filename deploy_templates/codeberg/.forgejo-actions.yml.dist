@@ -1,0 +1,29 @@
+name: Codeberg Build and Deploy
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install & Build
+        run: |
+          cd website
+          npm install
+          SKIP_HTML_MINIFICATION=true npm run build
+          npx js-beautify --type html -r "build/**/*.html"
+
+      - name: Deploy to Codeberg Pages
+        # Codeberg Pages typically requires pushing the build to a 'pages' branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          # Use a Codeberg Personal Access Token for the push
+          personal_token: ${{ secrets.CODEBERG_TOKEN }}
+          publish_dir: ./website/build
+          publish_branch: pages
+          external_repository: ${{ github.repository }}

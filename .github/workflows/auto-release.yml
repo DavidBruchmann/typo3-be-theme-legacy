@@ -1,0 +1,36 @@
+name: Build and Auto-Release
+on:
+  push:
+    tags:
+      - 'v*' # Triggers on tags starting with 'v'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Required to create releases
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Build & Beautify
+        run: |
+          npm install
+          SKIP_HTML_MINIFICATION=true npm run build
+          npx js-beautify --type html -r "build/**/*.html" # Your tidy step
+
+      - name: Zip Beautified HTML
+        run: zip -r documentation.zip build/
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: documentation.zip
+          generate_release_notes: true # Auto-summarizes commit messages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

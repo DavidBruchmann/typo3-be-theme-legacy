@@ -1,0 +1,22 @@
+image: node:20
+
+pipelines:
+  default:
+    - step:
+        name: Build and Beautify
+        script:
+          - cd website
+          - npm install
+          - SKIP_HTML_MINIFICATION=true npm run build
+          - npx js-beautify --type html -r "build/**/*.html" --indent-size 2
+        artifacts:
+          - website/build/**
+  tags:
+    'v*':
+      - step:
+          name: Create Release Artifact
+          script:
+            - apt-get update && apt-get install -y zip
+            - zip -r be-theme-docs-$BITBUCKET_TAG.zip website/build/
+          artifacts:
+            - "*.zip"
