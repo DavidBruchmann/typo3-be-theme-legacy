@@ -8,6 +8,24 @@ on:
     tags: ['v*']
 
 jobs:
+
+  # dedicated deployment job
+  deploy-site:
+    if: github.ref == 'refs/heads/main'
+    needs: build-and-deploy
+    permissions:
+      contents: write
+      pages: write      # Required for deployment
+      id-token: write   # Required for security handshake
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
   build-and-deploy:
     runs-on: ubuntu-latest
     strategy:
@@ -91,10 +109,17 @@ jobs:
       - name: Deploy Live Site (GitHub Pages)
         # Only deploy if we are on 'main'
         if: github.ref == 'refs/heads/main' && matrix.php == '8.4'
-        uses: peaceiris/actions-gh-pages@v4
+
+        ## a) FOR Deployment fro github actions
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./website/build
+          path: ./website/build
+
+        ## b)  FOR gh-pages (deploay from branch)
+        # uses: peaceiris/actions-gh-pages@v4
+        # with:
+        #  github_token: ${{ secrets.GITHUB_TOKEN }}
+        #  publish_dir: ./website/build
 
       - name: Create Versioned Offline Archive
         if: startsWith(github.ref, 'refs/tags/')
