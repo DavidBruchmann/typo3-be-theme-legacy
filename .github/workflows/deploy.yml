@@ -1,0 +1,131 @@
+name: Production Build and Deploy
+
+on:
+  push:
+    # Run on all these branches
+    branches: [main, develop, 'feature/**']
+    # Run on tags (prefix with v is required)
+    tags: ['v*']
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false # Continues other versions if one fails
+      matrix:
+        php: ['8.2', '8.3', '8.4', '8.5'] # Your target PHP versions
+    permissions:
+      contents: write
+    defaults:
+      run:
+        working-directory: ./website
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          # `fetch-depth: 0` Fetches full history
+          fetch-depth: 0
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          extensions: mbstring, xml, ctype, iconv, intl
+          tools: composer:v2
+
+      # Verify PHP version in logs
+      - name: Check PHP Version
+        run: php -v
+
+      # 1. Validate composer.json syntax and requirements
+      - name: Validate composer.json
+        run: composer validate --strict --no-check-publish
+
+      # 2. Check if dependencies can be resolved for this specific PHP version
+      # We use --prefer-dist and --no-progress for a clean CI output
+      - name: Dry-run Composer install
+        run: composer install --prefer-dist --no-progress --dry-run
+        # Use --ignore-platform-req=php+ for PHP 8.5 until it's officially released
+        if: matrix.php != '8.5'
+
+      # 3. Syntax check (Lint) all PHP files in the Classes directory
+      # This ensures no PHP 8.4/8.5 features leak into 8.2 builds
+      - name: PHP Linting (Classes)
+        run: |
+          find Classes -type f -name "*.php" -print0 | xargs -0 -n 1 -P 4 php -l
+
+      # Optional: Lint Configuration files as well
+      - name: PHP Linting (Configuration)
+        run: |
+          find Configuration -type f -name "*.php" -print0 | xargs -0 -n 1 -P 4 php -l
+
+      - name: Dry-run Composer install (Experimental PHP)
+        run: composer install --prefer-dist --no-progress --dry-run --ignore-platform-req=php+
+        if: matrix.php == '8.5'
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+          cache-dependency-path: './website/package-lock.json'
+
+      - name: Install & Build
+        run: |
+          npm install
+          # 1. Build the 'Online' version (Absolute paths)
+          SKIP_HTML_MINIFICATION=true npm run build:raw
+          # 2. Tidy & Badge
+          npm run build:beautify
+          npm run build:badge
+        env:
+          # Load your .env variables from repository secrets or hardcode here
+          BASE_URL: "/be-theme-legacy/"
+          GITHUB_REPO: "be-theme-legacy"
+
+      - name: Deploy Live Site (GitHub Pages)
+        # Only deploy if we are on 'main'
+        if: github.ref == 'refs/heads/main' && matrix.php == '8.4'
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./website/build
+
+      - name: Create Versioned Offline Archive
+        if: startsWith(github.ref, 'refs/tags/')
+        run: |
+          # 1. Create a clean copy so we don't break the build folder
+          OFFLINE_DIR="temp_offline"
+          cp -r build "$OFFLINE_DIR"
+
+          # 2. Scrub paths in the COPY only
+          node scripts/fix-relative-paths.js "./$OFFLINE_DIR"
+
+          # 3. Define Names
+          VERSION="${{ github.ref_name }}"
+          REPO_NAME="be-theme-legacy"
+          ZIP_NAME="${REPO_NAME}-documentation-${VERSION}.zip"
+          LATEST_ZIP="${REPO_NAME}-documentation-latest.zip"
+
+          # 4. ZIP the contents (without the parent folder)
+          cd "$OFFLINE_DIR"
+          zip -r "../../$ZIP_NAME" .
+          cd ..
+          cp "../$ZIP_NAME" "../$LATEST_ZIP"
+
+          # 5. Move to root for the Release uploader
+          mv "../$ZIP_NAME" ../
+          mv "../$LATEST_ZIP" ../
+        env:
+          BASE_URL: "/be-theme-legacy/"
+
+      - name: Upload to GitHub Release
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          draft: true
+          prerelease: false
+          files: |
+            be-theme-legacy-documentation-*.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

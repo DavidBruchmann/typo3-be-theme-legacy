@@ -1,0 +1,54 @@
+{
+  "name": "wdb/be-theme-legacy",
+  "description": "",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "docusaurus": "docusaurus",
+    "start": "docusaurus start",
+    "dev": "concurrently \"npm run start\" ",
+    "serve": "docusaurus serve",
+    "start:https": "docusaurus start --https --port 3001",
+    "clear": "docusaurus clear",
+    "deploy": "docusaurus deploy",
+    "build": "SKIP_HTML_MINIFICATION=true docusaurus build && npm run build:beautify && npm run build:makePathsRelative && npm run build:badge",
+    "build:raw": "docusaurus build",
+    "build:beautify": "js-beautify --type html -r \"build/**/*.html\" --indent-size 2 --wrap-line-length 80",
+    "build:badge": "node scripts/generate-badge.js",
+    "build:makePathsRelative": "node scripts/fix-relative-paths.js"
+  },
+  "dependencies": {
+    "20": "^3.1.9",
+    "@docusaurus/core": "^3.2.1",
+    "@docusaurus/preset-classic": "^3.2.1",
+    "@mdx-js/react": "^3.0.0",
+    "clsx": "^2.0.0",
+    "docusaurus-plugin-sass": "^0.2.6",
+    "node": "^20.20.0",
+    "node-fetch": "^3.3.2",
+    "raw-loader": "^4.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-markdown": "^10.1.0",
+    "turndown": "^7.2.2",
+    "turndown-plugin-gfm": "^1.0.2"
+  },
+  "devDependencies": {
+    "dotenv": "^17.2.3",
+    "js-beautify": "^1.15.4",
+    "sass": "^1.97.1",
+    "sass-loader": "^16.0.6"
+  },
+  "browserslist": {
+    "production": [
+      ">0.5%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

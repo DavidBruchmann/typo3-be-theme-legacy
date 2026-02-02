@@ -364,10 +364,11 @@ typo3-backend-icon[identifier="module-workspaces"]::part(icon),
 [data-identifier="module-workspaces"] .icon-markup {
     background-image: url('../Icons/module/module-workspaces.svg');
 }
-
+/*
 .breadcrumb-item-first [data-identifier="module-list"] .icon-markup svg {
 
 }
 .breadcrumb-item-first span.icon.icon-size-small.icon-state-default.icon-module-list span.icon-markup svg {
     display: none !important;
 }
+*/

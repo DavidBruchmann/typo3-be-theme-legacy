@@ -1,0 +1,20 @@
+# Force LF line endings for consistency across OS
+* text=auto eol=lf
+
+# Exclude Docusaurus and build tooling from Composer/ZIP releases
+/website/           export-ignore
+/deploy_templates/  export-ignore
+/.github/           export-ignore
+/.gitattributes     export-ignore
+/node_modules/      export-ignore
+
+# Exclude specific config and log files
+.gitignore          export-ignore
+.gitattributes      export-ignore
+test-build.sh       export-ignore
+npm-debug.log*      export-ignore
+
+# Ensure Documentation is included for TYPO3 rendering
+/Documentation/     text
+/README.md          text
+/LICENSE            text

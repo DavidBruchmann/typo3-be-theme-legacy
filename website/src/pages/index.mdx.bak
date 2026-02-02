@@ -1,0 +1,22 @@
+---
+title: Home
+slug: /
+---
+
+import README from '!!raw-loader!@site/../README.md';
+import Changelog from '!!raw-loader!@site/../Documentation/Changelog.md';
+
+{/* We use a simple <div> with white-space preservation or a standard MDX display */}
+
+<div className="markdown">
+  <README />
+</div>
+
+---
+
+### 📜 Recent Updates
+<div className="markdown">
+  <Changelog />
+</div>
+
+[View Full Changelog](./docs/Changelog)

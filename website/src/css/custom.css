@@ -1,0 +1,5 @@
+.markdown {
+  white-space: pre-wrap;
+  line-height: 1.6;
+  font-family: var(--ifm-font-family-base);
+}
