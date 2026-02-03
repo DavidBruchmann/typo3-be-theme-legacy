@@ -94,7 +94,8 @@ if (!process.env.BASE_URL) {
 }
 
 const buildDir = path.resolve(__dirname, '../build');
-// Ensure baseUrl matches what's in your .env (e.g., "/be-theme-legacy/")
+
+// Ensure baseUrl matches what's in your .env (e.g., "/typo3-be-theme-legacy/")
 const baseUrl = process.env.BASE_URL; // || '/';
 
 function walk(targetPath, callback) {
@@ -133,7 +134,7 @@ walk(buildDir, (filePath) => {
         let newVal = val;
         let rulesApplied = [];
 
-        // 1. Strip the BASE_URL from the path (e.g., /be-theme-legacy/ -> /)
+        // 1. Strip the BASE_URL from the path (e.g., /typo3-be-theme-legacy/ -> /)
         if (newVal.startsWith(baseUrl)) {
             newVal = newVal.substring(baseUrl.length);
             rulesApplied['1_baseUrl'] = newVal + ' [' + baseUrl.length + ']';
