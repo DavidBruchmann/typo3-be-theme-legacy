@@ -94,6 +94,7 @@ if (!process.env.BASE_URL) {
 }
 
 const buildDir = path.resolve(__dirname, '../build');
+
 // Ensure baseUrl matches what's in your .env (e.g., "/typo3-be-theme-legacy/")
 const baseUrl = process.env.BASE_URL; // || '/';
 
