@@ -1,6 +1,6 @@
 #!/bin/bash
 CHANGELOG_FILE="Documentation/Changelog.md"
-REPO_URL="https://github.com/DavidBruchmann/be-theme-legacy/"
+REPO_URL="https://github.com/DavidBruchmann/typo3-be-theme-legacy/"
 
 # 1. Define the range (Old state .. New state)
 # In GitHub Actions, these are available via environment variables

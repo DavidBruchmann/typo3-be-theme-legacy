@@ -10,7 +10,7 @@ export default {
   title: 'Backend Theme Legacy',
   tagline: 'Modern TYPO3 v14 Backend Customization',
   url: 'https://davidbruchmann.github.io',
-  baseUrl: '/be-theme-legacy/',
+  baseUrl: '/typo3-be-theme-legacy/',
   organizationName: 'DavidBruchmann',
   projectName: 'be-theme-legacy',
   favicon: '../Resources/Public/Icons/favicon.ico',

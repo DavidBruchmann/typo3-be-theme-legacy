@@ -86,8 +86,8 @@ jobs:
           npm run build:badge
         env:
           # Load your .env variables from repository secrets or hardcode here
-          BASE_URL: "/be-theme-legacy/"
-          GITHUB_REPO: "be-theme-legacy"
+          BASE_URL: "/typo3-be-theme-legacy/"
+          GITHUB_REPO: "typo3-be-theme-legacy"
 
       - name: Deploy Live Site (GitHub Pages)
         # Only deploy if we are on 'main'
