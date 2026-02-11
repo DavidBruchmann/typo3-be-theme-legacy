@@ -3,16 +3,15 @@ declare(strict_types=1);
 
 namespace WDB\BeThemeLegacy\EventListener;
 
-use TYPO3\CMS\Core\Page\Event\BeforeJavaScriptsRenderingEvent;
+use TYPO3\CMS\Core\Attribute\AsEventListener;
 use TYPO3\CMS\Core\Http\ApplicationType;
+use TYPO3\CMS\Core\Page\Event\BeforeJavaScriptsRenderingEvent;
 
-/*
 #[AsEventListener(
     identifier: 'WDB\BeThemeLegacy\EventListener\ThemeLegacy',
     event: BeforeJavaScriptsRenderingEvent::class
     // before: 'someIdentifier, anotherIdentifier',
 )]
-*/
 final class BeforeJavaScriptsRenderingEventListener
 {
     public function __invoke(BeforeJavaScriptsRenderingEvent $event): void
