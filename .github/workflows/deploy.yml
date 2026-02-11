@@ -126,9 +126,9 @@ jobs:
           cd ..
           cp "../$ZIP_NAME" "../$LATEST_ZIP"
 
-          # 5. Move to root for the Release uploader
-          mv "../$ZIP_NAME" ../
-          mv "../$LATEST_ZIP" ../
+          ## 5. Move to root for the Release uploader
+          # mv "../$ZIP_NAME" ../
+          # mv "../$LATEST_ZIP" ../
         env:
           BASE_URL: "/be-theme-legacy/"
 
