@@ -3,16 +3,15 @@ declare(strict_types=1);
 
 namespace WDB\BeThemeLegacy\EventListener;
 
-use TYPO3\CMS\Core\Page\Event\BeforeStylesheetsRenderingEvent;
+use TYPO3\CMS\Core\Attribute\AsEventListener;
 use TYPO3\CMS\Core\Http\ApplicationType;
+use TYPO3\CMS\Core\Page\Event\BeforeStylesheetsRenderingEvent;
 
-/*
 #[AsEventListener(
     identifier: 'WDB\BeThemeLegacy\EventListener\ThemeLegacy',
     event: BeforeStylesheetsRenderingEvent::class
     // before: 'someIdentifier, anotherIdentifier',
 )]
-*/
 final class BeforeStylesheetsRenderingEventListener
 {
     public function __invoke(BeforeStylesheetsRenderingEvent $event): void
