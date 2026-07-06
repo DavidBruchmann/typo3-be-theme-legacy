@@ -7,11 +7,11 @@ $EM_CONF[$_EXTKEY] = [
     'author' => 'David Bruchmann',
     'author_email' => 'david.bruchmann@gmail.com',
     'state' => 'stable',
-    'version' => '1.1.1',
+    'version' => '1.2.0',
     'constraints' => [
         'depends' => [
-            'core' => '14.1.0-14.99.99',
-            'backend' => '14.1.0-14.99.99',
+            'core' => '14.3.0-14.99.99',
+            'backend' => '14.3.0-14.99.99',
         ],
         'conflicts' => [],
         'suggests' => [],

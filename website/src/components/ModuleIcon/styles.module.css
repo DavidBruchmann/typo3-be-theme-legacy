@@ -1,0 +1,29 @@
+/* Theme tokens automatically managed by Docusaurus */
+.iconContainer {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  margin: 4px 0;
+  width: 100%;
+
+  /* Light mode defaults */
+  background-color: #f5f6f7;
+  color: #1c1e21;
+}
+
+.svgIcon {
+  fill: currentColor;
+}
+
+.iconLabel {
+  font-family: monospace;
+  font-weight: 600;
+}
+
+/* Dark mode overrides using Docusaurus default html attribute */
+:global([data-theme='dark']) .iconContainer {
+  background-color: #242526;
+  color: #e3e3e3;
+}

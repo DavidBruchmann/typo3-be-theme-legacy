@@ -9,7 +9,7 @@ const FeatureList = [
     Svg: require('../../../../Resources/Public/Icons/Extension.svg').default,  // You can replace with TYPO3 icons
     description: (
       <>
-        A modernized, lightweight backend experience for <b>TYPO3 v14.1+</b>.
+        A modernized, lightweight backend experience for <b>TYPO3 v14.3.0+</b>.
         Focusing on CSS variables, clean module icons, and seamless integration.
       </>
     ),

@@ -19,8 +19,8 @@
   },
   "dependencies": {
     "20": "^3.1.9",
-    "@docusaurus/core": "^3.2.1",
-    "@docusaurus/preset-classic": "^3.2.1",
+    "@docusaurus/core": "^3.10.1",
+    "@docusaurus/preset-classic": "^3.10.1",
     "@mdx-js/react": "^3.0.0",
     "clsx": "^2.0.0",
     "docusaurus-plugin-sass": "^0.2.6",
@@ -36,7 +36,7 @@
   "devDependencies": {
     "dotenv": "^17.2.3",
     "js-beautify": "^1.15.4",
-    "sass": "^1.97.1",
+    "sass": "^1.97.3",
     "sass-loader": "^16.0.6"
   },
   "browserslist": {

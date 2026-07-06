@@ -5,7 +5,7 @@
         const IconProto = customElements.get('typo3-backend-icon').prototype;
         const originalUpdate = IconProto.update;
 
-        // 2. Die update-Methode patchen
+        // patch update-method
         IconProto.update = function(changedProperties) {
             // original rendering of Lit
             originalUpdate.call(this, changedProperties);
