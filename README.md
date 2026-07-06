@@ -24,7 +24,7 @@ account and adjust the theme.
 
 There aren't any administrative tasks to consider, the extension works
 out of the box and display is purely depending on the individual
-user-settings, which only add an additional CSS file in the backend
+user-settings, which essentially add an additional CSS file in the backend
 if the according theme is selected.
 
 ## Installation

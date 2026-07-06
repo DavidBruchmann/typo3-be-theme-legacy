@@ -3,6 +3,10 @@
 @use "layout";
 // @use "qa";
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Global overrides */
 body {
   font-feature-settings: "liga" 1;
@@ -52,9 +56,52 @@ html[data-theme='dark'] .navbar__item--kofi::before {
 </svg>") no-repeat center / contain;
 }
 
+[data-theme='dark'] {
+  --ifm-color-primary: #80E9FF; /* A lighter, more accessible blue */
+  --ifm-link-color: #80E9FF;    /* Or switch to an amber/yellow for links */
+
+  /*
+  --ifm-breadcrumb-color-active: #80E9FF;
+  --ifm-navbar-link-color: #80E9FF;
+  --ifm-menu-color-active: #80E9FF;
+
+   --ifm-navbar-link-hover-color: #faeb34; */
+}
+
 /* Force Home icon to white in dark mode */
 html[data-theme='dark'] .navbar__item--home {
   color: var(--ifm-color-white);
+}
+
+.svg-wrapper {
+  color: var(--ifm-color-black);
+}
+html[data-theme='dark'] .svg-wrapper {
+  color: var(--ifm-color-white);
+}
+
+/* Hide the original PNG image */
+.navbar__logo {
+  display: none;
+}
+
+/* Use the brand anchor as the new masked logo container */
+.navbar__brand {
+  width: 100px;  /* Match your logo width */
+  height: 32px;  /* Match your logo height */
+  display: inline-block;
+
+  /* Apply the theme-aware color */
+  background-color: var(--ifm-navbar-link-color);
+
+  /* Apply the PNG as a mask */
+  mask: url('/img/themeTruck-logo.png') no-repeat center / contain;
+  -webkit-mask: url('/img/themeTruck-logo.png') no-repeat center / contain;
+}
+
+/* Optional: Change color on hover */
+.navbar__brand:hover {
+  background-color: var(--ifm-color-primary);
 }
 
 /*

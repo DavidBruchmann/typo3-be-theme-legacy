@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace WDB\BeThemeLegacy\EventListener;
@@ -8,11 +9,9 @@ use TYPO3\CMS\Core\Http\ApplicationType;
 use TYPO3\CMS\Core\Page\Event\BeforeStylesheetsRenderingEvent;
 
 #[AsEventListener(
-    identifier: 'WDB\BeThemeLegacy\EventListener\ThemeLegacy',
-    event: BeforeStylesheetsRenderingEvent::class
-    // before: 'someIdentifier, anotherIdentifier',
+    identifier: 'be-theme-legacy/before-stylesheets-rendering-event'
 )]
-final class BeforeStylesheetsRenderingEventListener
+final class BeforeStylesheetsRenderingEventListener extends AbstractEventListener
 {
     public function __invoke(BeforeStylesheetsRenderingEvent $event): void
     {
@@ -20,7 +19,7 @@ final class BeforeStylesheetsRenderingEventListener
         if (!$request || !ApplicationType::fromRequest($request)->isBackend()) {
             return;
         }
-        $userTheme = $this->getBackendUser()->uc['theme'] ?? '';
+        $userTheme = $this->getBackendUser()->getUserSettings()->toArray()['theme'] ?? '';
         if ($userTheme === 'be_theme_legacy') {
             $assetCollector = $event->getAssetCollector();
             $this->addStyleSheetFile($assetCollector);
@@ -40,15 +39,5 @@ final class BeforeStylesheetsRenderingEventListener
             // 'external' => true,
         ];
         $assetCollector->addStyleSheet($identifier, $source, $attributes, $options);
-    }
-
-    private function getRequest()
-    {
-        return $GLOBALS['TYPO3_REQUEST'] ?? null;
-    }
-
-    private function getBackendUser()
-    {
-        return $GLOBALS['BE_USER'] ?? null;
     }
 }
