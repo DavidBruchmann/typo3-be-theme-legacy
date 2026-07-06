@@ -35,7 +35,8 @@
     },
     "extra": {
         "typo3/cms": {
-            "extension-key": "be_theme_legacy"
+            "extension-key": "be_theme_legacy",
+			"version": "1.2.0"
         }
     }
 }
