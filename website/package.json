@@ -1,7 +1,7 @@
 {
   "name": "wdb/typo3-be-theme-legacy",
   "description": "",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
@@ -18,13 +18,12 @@
     "build:makePathsRelative": "node scripts/fix-relative-paths.js"
   },
   "dependencies": {
-    "20": "^3.1.9",
     "@docusaurus/core": "^3.10.1",
     "@docusaurus/preset-classic": "^3.10.1",
     "@mdx-js/react": "^3.0.0",
     "clsx": "^2.0.0",
     "docusaurus-plugin-sass": "^0.2.6",
-    "node": "^20.20.0",
+    "node": "^24.0.0",
     "node-fetch": "^3.3.2",
     "raw-loader": "^4.0.2",
     "react": "^18.2.0",
