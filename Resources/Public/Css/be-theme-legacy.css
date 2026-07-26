@@ -172,11 +172,7 @@ typo3-backend-icon[identifier="module-workspaces"]::part(svg),
 [data-identifier="module-version"] .icon-markup svg,
 [data-identifier="module-viewpage"] .icon-markup svg,
 [data-identifier="module-webhooks"] .icon-markup svg,
-[data-identifier="module-workspaces"] .icon-markup svg
-/*
-module-webhooks
-module-workspaces
-*/ { display: none !important;}
+[data-identifier="module-workspaces"] .icon-markup svg { display: none !important;}
 
 typo3-backend-icon[identifier="module-about"]::part(icon),
 [data-identifier="module-about"] .icon-markup {
