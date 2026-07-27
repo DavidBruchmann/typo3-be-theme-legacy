@@ -6,12 +6,6 @@ on:
     branches: [main, develop, development, 'feature/**']
     # Run on tags (prefix with v is required)
     tags: ['v*']
-  pull_request:
-    types: [opened, synchronize, reopened]
-    # Run on all these branches
-    branches: [main, develop, development, 'feature/**']
-    # Run on tags (prefix with v is required)
-    tags: ['v*']
 
 jobs:
 
@@ -29,7 +23,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v7
         with:
           # `fetch-depth: 0` Fetches full history
           fetch-depth: 0
@@ -55,7 +49,7 @@ jobs:
         run: composer install --prefer-dist --no-progress --dry-run
         working-directory: .
         # Use --ignore-platform-req=php+ for PHP 8.5 until it's officially released
-        if: matrix.php != '8.5'
+        # if: matrix.php != '8.5'
 
       # 3. Syntax check (Lint) all PHP files in the Classes directory
       # This ensures no PHP 8.4/8.5 features leak into 8.2 builds
@@ -70,13 +64,13 @@ jobs:
         run: |
           find Configuration -type f -name "*.php" -print0 | xargs -0 -n 1 -P 4 php -l
 
-      - name: Dry-run Composer install (Experimental PHP)
-        working-directory: .
-        run: composer install --prefer-dist --no-progress --dry-run --ignore-platform-req=php+
-        if: matrix.php == '8.5'
+      #- name: Dry-run Composer install (Experimental PHP)
+      #  working-directory: .
+      #  run: composer install --prefer-dist --no-progress --dry-run --ignore-platform-req=php+
+      #  if: matrix.php == '8.5'
 
       - name: Setup Node
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v7
         with:
           node-version: 24
           cache: 'npm'
@@ -100,7 +94,7 @@ jobs:
         if: github.ref == 'refs/heads/main' && matrix.php == '8.4'
 
         ## a) FOR Deployment fro github actions
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: ./website/build
 
@@ -140,7 +134,7 @@ jobs:
 
       - name: Upload to GitHub Release
         if: startsWith(github.ref, 'refs/tags/')
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           draft: true
           prerelease: false
