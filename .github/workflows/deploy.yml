@@ -6,12 +6,6 @@ on:
     branches: [main, develop, development, 'feature/**']
     # Run on tags (prefix with v is required)
     tags: ['v*']
-  pull_request:
-    types: [opened, synchronize, reopened]
-    # Run on all these branches
-    branches: [main, develop, development, 'feature/**']
-    # Run on tags (prefix with v is required)
-    tags: ['v*']
 
 jobs:
 
