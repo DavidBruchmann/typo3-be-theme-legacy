@@ -1,8 +1,9 @@
-import {version} from '../../../package.json';
+[![Latest Stable Version](http://poser.pugx.org/wdb/be-theme-legacy/v)](https://packagist.org/packages/wdb/be-theme-legacy)
 [![TYPO3 14](https://img.shields.io/badge/TYPO3-14-orange.svg)](https://get.typo3.org/version/14)
+[![Total Downloads](http://poser.pugx.org/wdb/be-theme-legacy/downloads)](https://packagist.org/packages/wdb/be-theme-legacy)
+[![Monthly Downloads](http://poser.pugx.org/wdb/be-theme-legacy/d/monthly)](https://packagist.org/packages/wdb/be-theme-legacy)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/L3L81RC51J)
-<CustomBadge label="version" value={version} color="#28a745" />
+[![Donate](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/L3L81RC51J)
 
 
 # "Backend Theme Legacy" for TYPO3 v14

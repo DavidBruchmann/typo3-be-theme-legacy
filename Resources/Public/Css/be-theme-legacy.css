@@ -108,6 +108,19 @@ typo3-backend-icon[identifier="module-reports"]::part(svg),
 typo3-backend-icon[identifier="module-rte-ckeditor"]::part(svg),
 typo3-backend-icon[identifier="module-scheduler"]::part(svg),
 typo3-backend-icon[identifier="module-security"]::part(svg),
+typo3-backend-icon[identifier="module-seo"]::part(svg),
+typo3-backend-icon[identifier="module-setup"]::part(svg),
+typo3-backend-icon[identifier="module-sites"]::part(svg),
+typo3-backend-icon[identifier="module-site-settings"]::part(svg),
+typo3-backend-icon[identifier="module-styleguide"]::part(svg),
+typo3-backend-icon[identifier="module-taskcenter"]::part(svg),
+typo3-backend-icon[identifier="module-template"]::part(svg),
+typo3-backend-icon[identifier="module-tsconfig"]::part(svg),
+typo3-backend-icon[identifier="module-urls"]::part(svg),
+typo3-backend-icon[identifier="module-version"]::part(svg),
+typo3-backend-icon[identifier="module-viewpage"]::part(svg),
+typo3-backend-icon[identifier="module-webhooks"]::part(svg),
+typo3-backend-icon[identifier="module-workspaces"]::part(svg),
 [data-identifier="module-about"] .icon-markup svg,
 [data-identifier="module-aboutmodules"] .icon-markup svg,
 [data-identifier="module-adminpanel"] .icon-markup svg,
@@ -146,7 +159,20 @@ typo3-backend-icon[identifier="module-security"]::part(svg),
 [data-identifier="module-reports"] .icon-markup svg,
 [data-identifier="module-rte-ckeditor"] .icon-markup svg,
 [data-identifier="module-scheduler"] .icon-markup svg,
-[data-identifier="module-security"] .icon-markup svg { display: none !important;}
+[data-identifier="module-security"] .icon-markup svg,
+[data-identifier="module-seo"] .icon-markup svg,
+[data-identifier="module-setup"] .icon-markup svg,
+[data-identifier="module-sites"] .icon-markup svg,
+[data-identifier="module-site-settings"] .icon-markup svg,
+[data-identifier="module-styleguide"] .icon-markup svg,
+[data-identifier="module-taskcenter"] .icon-markup svg,
+[data-identifier="module-template"] .icon-markup svg,
+[data-identifier="module-tsconfig"] .icon-markup svg,
+[data-identifier="module-urls"] .icon-markup svg,
+[data-identifier="module-version"] .icon-markup svg,
+[data-identifier="module-viewpage"] .icon-markup svg,
+[data-identifier="module-webhooks"] .icon-markup svg,
+[data-identifier="module-workspaces"] .icon-markup svg { display: none !important;}
 
 typo3-backend-icon[identifier="module-about"]::part(icon),
 [data-identifier="module-about"] .icon-markup {
@@ -360,11 +386,3 @@ typo3-backend-icon[identifier="module-workspaces"]::part(icon),
 [data-identifier="module-workspaces"] .icon-markup {
     background-image: url('../Icons/module/module-workspaces.svg');
 }
-/*
-.breadcrumb-item-first [data-identifier="module-list"] .icon-markup svg {
-
-}
-.breadcrumb-item-first span.icon.icon-size-small.icon-state-default.icon-module-list span.icon-markup svg {
-    display: none !important;
-}
-*/

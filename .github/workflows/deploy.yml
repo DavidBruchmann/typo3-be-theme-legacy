@@ -3,7 +3,13 @@ name: Production Build and Deploy
 on:
   push:
     # Run on all these branches
-    branches: [main, develop, 'feature/**']
+    branches: [main, develop, development, 'feature/**']
+    # Run on tags (prefix with v is required)
+    tags: ['v*']
+  pull_request:
+    types: [opened, synchronize, reopened]
+    # Run on all these branches
+    branches: [main, develop, development, 'feature/**']
     # Run on tags (prefix with v is required)
     tags: ['v*']
 
@@ -23,7 +29,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           # `fetch-depth: 0` Fetches full history
           fetch-depth: 0
@@ -70,9 +76,9 @@ jobs:
         if: matrix.php == '8.5'
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
-          node-version: 20
+          node-version: 24
           cache: 'npm'
           cache-dependency-path: './website/package-lock.json'
 
@@ -159,7 +165,7 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
 
   # Add this at the end of your jobs in deploy.yml
   all-checks-passed:
